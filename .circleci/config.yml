@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:    
     macos:  # indicate that we are using the macOS executor
-      xcode: "10.0.0"
+      xcode: "10.3.0"
 
     branches:
       only: master
@@ -20,8 +20,8 @@ jobs:
 
       - run:
           name: Build the Android version
-          command: ./flutter/bin/flutter doctor -v
-
+          command: ./flutter/bin/flutter channel stable
+  
       - store_artifacts:
           path: build/app/outputs/apk/release/app-release.apk
 
