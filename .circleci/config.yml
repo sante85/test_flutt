@@ -19,11 +19,11 @@ jobs:
           command: cd flutter/bin
       - run:
           name: Run the application tests
-          command: echo 'export PATH=./flutter/bin/flutter:$PATH'
+          command: echo 'export FL=./flutter/bin/flutter >> $BASH_ENV'
 
       - run:
           name: Build the Android version
-          command: flutter channel stable
+          command: sh ${FL} channel stable
 
 
   
