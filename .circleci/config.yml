@@ -19,7 +19,7 @@ jobs:
           command: cd flutter/bin
       - run:
           name: Run the application tests
-          command: echo 'export PATH=$PWD:$PATH'
+          command: echo 'export PATH=./flutter/bin/flutter:$PATH'
 
       - run:
           name: Build the Android version
