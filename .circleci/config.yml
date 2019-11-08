@@ -1,10 +1,10 @@
 version: 2
 jobs:
   build:    
-    macos:  # indicate that we are using the macOS executor
-      xcode: "10.0.0"
-    #docker:
-     # - image: cirrusci/flutter:v1.5.8 
+    #macos:  # indicate that we are using the macOS executor
+      #xcode: "10.0.0"
+    docker:
+      - image: mojave-flutter
 
     branches:
       only: master
