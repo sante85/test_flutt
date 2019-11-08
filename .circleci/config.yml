@@ -1,8 +1,10 @@
 version: 2
 jobs:
   build:    
-    docker:
-      - image: cirrusci/flutter:v1.5.8 
+     macos:  # indicate that we are using the macOS executor
+      xcode: "10.0.0"
+    #docker:
+     # - image: cirrusci/flutter:v1.5.8 
 
     branches:
       only: master
@@ -20,7 +22,7 @@ jobs:
 
       - run:
           name: Build the Android version
-          command: flutter build apk 
+          command: flutter build ios --no-code-sign 
 
       - store_artifacts:
           path: build/app/outputs/apk/release/app-release.apk
