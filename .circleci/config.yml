@@ -16,7 +16,7 @@ jobs:
 
       - run:
           name: Run the application tests
-          command: cd flutter/bin
+          command: git clone https://github.com/sante85/test_flutt
       - run:
           name: Run the application tests
           command: echo "export PATH=flutter/bin:$PATH" >> $BASH_ENV
@@ -24,6 +24,12 @@ jobs:
       - run:
           name: Build the Android version
           command: flutter channel stable
+      - run:
+          name: Build the Android version
+          command: cd test_flutt
+      - run:
+          name: Build the Android version
+          command: flutter build ios
 
 
   
