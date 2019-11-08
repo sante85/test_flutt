@@ -23,7 +23,7 @@ jobs:
 
       - run:
           name: Build the Android version
-          command: ${echo ${FL}} channel stable
+          command: echo ${FL}
 
 
   
